@@ -9,7 +9,7 @@
   flex: 1
 
 section
-  margin: 50px 0
+  padding: 50px 0
 
 
 //Flex Classes
@@ -29,7 +29,6 @@ section
 //Columns
 .col-1
   width: 300px
-  background: pink
   margin: 0 10px
 
 .col-2
@@ -41,9 +40,12 @@ section
   background: yellow
   width: 50%
 
+.push-right
+  margin-left: 330px
+
 
 @media (max-width: 640px)
-  .flex
+  .home-sections .flex
     display: block
 
   .col-1
@@ -51,3 +53,12 @@ section
 
   .col-50
     width: auto
+
+  .push-right
+    margin-left: 10px
+
+
+//Typography
+.home-lead
+  font-size: 36px
+  line-height: 1.1
