@@ -1,6 +1,6 @@
 .home-wrap
-  min-height: 100vh
   display: flex
+  min-height: 100vh
 
   @media (max-width: 775px)
     display: block
@@ -8,40 +8,45 @@
 .home-sections
   flex: 1
 
-section
-  padding: 50px 0
+  section
+    padding: 50px 0
+
+  //Flex Clases
+  .flex
+    display: flex
+    flex-direction: row
+
+  .flex--center
+    justify-content: center
+
+  .flex--space-around
+    justify-content: space-around
+
+  .flex--space-between
+    justify-content: space-between
+
+  .order-first
+    order: -1
 
 
-//Flex Classes
-.flex
-  display: flex
-  flex-direction: row
-
-.flex--center
-  justify-content: center
-
-.flex--space-around
-  justify-content: space-around
-
-.order-first
-  order: -1
-
-//Columns
+//columns
 .col-1
   width: 300px
   margin: 0 10px
+  // background: pink
 
 .col-2
   max-width: 620px
-  background: honeydew
   margin: 0 10px
+  background: honeydew
 
 .col-50
-  background: yellow
   width: 50%
+  background: aqua
 
 .push-right
   margin-left: 330px
+
 
 
 @media (max-width: 640px)
@@ -64,7 +69,11 @@ section
   line-height: 1.1
 
   &.outdented
-    text-indent: -0.75em
+    text-indent: -0.8em
 
-    @media (max-width: 640px)
+@media (max-width: 640px)
+  .home-lead
+    text-align: center
+
+    &.outdented
       text-indent: 0
