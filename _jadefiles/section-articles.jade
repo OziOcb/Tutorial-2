@@ -1,31 +1,23 @@
 mixin thumb
-  a(href="#1" style="background-image: url(http://fillmurray.com/230/500)").article-thumb
+  a(href="#1" style="background-image: url(http://fillmurray.com/230/500").article-thumb
     .article-meta
       .name Article Name
-      .date Dec 10, 2010
-
+      .date Dec 10, 1987
 
 section.articles
   .flex.flex--center
     
     .col-50
       .article-wrap
-        +thumb
-        +thumb
-        +thumb
-        +thumb
-        +thumb
-        +thumb
-        +thumb
-        +thumb
-        +thumb
-        +thumb        
-        +thumb
-        +thumb
+        {% for post in site.posts limit: 12 %}
+        a(href="{{post.url}}" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").article-thumb
+          .article-meta
+            .name {{post.title}}
+            .date {{post.date | date: "%b %d, %Y"}}
+        {% endfor %}
         
-            
     .col-50.flex.flex--center.order-first
       .col-1
-        .desc-wrap  
+        .desc-wrap
           p.home-lead.outdented  ...Writing and designing articles...
-          a(href="https://github.com/OziOcb").home-cta See all Articles
+          a(href="").home-cta See all Articles
