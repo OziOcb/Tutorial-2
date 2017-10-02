@@ -931,6 +931,40 @@ section.vine {
     section.vine .description {
       margin-top: 50px; } }
 
+.home-sections .design {
+  padding: 0px; }
+
+section.design {
+  color: white; }
+  section.design .home-lead {
+    text-align: center;
+    font-size: 30px; }
+  section.design .dribbble, section.design .behance {
+    background-color: #ed4b83;
+    background-image: url(../img/design-bg.png);
+    background-position: center;
+    padding: 50px 0; }
+    section.design .dribbble.behance, section.design .behance.behance {
+      background-color: #4359db; }
+      section.design .dribbble.behance .home-cta, section.design .behance.behance .home-cta {
+        color: #4359db; }
+    section.design .dribbble .home-cta, section.design .behance .home-cta {
+      font-size: 24px;
+      color: #ed4b83; }
+  section.design .design-img-link {
+    display: block;
+    float: left;
+    width: calc(50% - 14px);
+    border: 2px solid white;
+    margin: 5px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3); }
+    section.design .design-img-link img {
+      width: 100%;
+      display: block; }
+  section.design .cf {
+    clear: both;
+    margin-bottom: 20px; }
+
 .home-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
