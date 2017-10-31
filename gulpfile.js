@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var jade        = require('gulp-jade');
+var sourcemaps  = require('gulp-sourcemaps');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -42,6 +43,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  */
 gulp.task('sass', function () {
     return gulp.src('assets/css/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify
@@ -49,6 +51,7 @@ gulp.task('sass', function () {
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('assets/css'));
 });
 
